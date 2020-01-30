@@ -10,4 +10,10 @@ $updateArray = json_decode($update, TRUE);
 
 print_r($updateArray);
 
-</form>
+$chatId = $updateArray["result"][0]["message"]["chat"]["id"];
+
+file_get_contents($website."/sendmessage?chat_id=".$chatID."$text=test");
+
+
+
+?>
